@@ -1,24 +1,92 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import classes from "./ContactUs.module.css";
-import { Heading, Text, VideoBg, Wrapper } from "@/components/common";
+import { Heading, Text, Wrapper } from "@/components/common";
+import VideoBg from "../../common/VideoBg/VideoBg"
 import clsx from "clsx";
-import Input from "@/components/common/Input/Input";
+
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xkgwwnje");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+  return (
+    <form onSubmit={handleSubmit} className={classes.form}>
+      <label htmlFor="first-name" className={classes.label}>
+        First Name
+      </label>
+      <input
+        id="first-name"
+        type="text"
+        name="firstName"
+        className={classes.input}
+      />
+      <ValidationError
+        prefix="First Name"
+        field="firstName"
+        errors={state.errors}
+        className={classes.error}
+      />
+
+      <label htmlFor="last-name" className={classes.label}>
+        Last Name
+      </label>
+      <input
+        id="last-name"
+        type="text"
+        name="lastName"
+        className={classes.input}
+      />
+      <ValidationError
+        prefix="Last Name"
+        field="lastName"
+        errors={state.errors}
+        className={classes.error}
+      />
+
+      <label htmlFor="email" className={classes.label}>
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        className={classes.input}
+      />
+      <ValidationError
+        prefix="Email"
+        field="email"
+        errors={state.errors}
+        className={classes.error}
+      />
+
+      <label htmlFor="company" className={classes.label}>
+        Company Name
+      </label>
+      <input
+        id="company"
+        type="text"
+        name="company"
+        className={classes.input}
+      />
+      <ValidationError
+        prefix="Company"
+        field="company"
+        errors={state.errors}
+        className={classes.error}
+      />
+
+      <button type="submit" disabled={state.submitting} className={classes.button}>
+        Submit
+      </button>
+    </form>
+  );
+}
 
 const ContactUs = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [message, setMessage] = useState("");
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const socialLiks = [
+  const socialLinks = [
     { logo: "/images/youtube.png", link: "#" },
     { logo: "/images/rumble.png", link: "#" },
     { logo: "/images/odysee.png", link: "#" },
@@ -26,10 +94,8 @@ const ContactUs = () => {
 
   return (
     <Wrapper className={classes.mainWrapper} id="contact">
-      <div id="anchor-contact" className="anchor"></div>
       <div className={clsx("container", classes.container)}>
-        {/* Render the VideoBg component only on the client side */}
-        {isClient && <VideoBg url="/video/UFO_BG.mp4" />}
+      <VideoBg url="/video/UFO_BG.mp4" />
         <Heading xl5 highlight className={classes.heading}>
           Contact
         </Heading>
@@ -41,52 +107,15 @@ const ContactUs = () => {
           collaborate on a project, feel free to drop us a message!
         </Text>
         <div className={classes.socialContainer}>
-          {socialLiks.map((social, i) => (
+          {socialLinks.map((social, i) => (
             <a href={social.link} target="_blank" rel="noreferrer" key={i}>
-              <img src={social.logo} alt="#" className={classes.logo} />
+              <img src={social.logo} alt="social logo" className={classes.logo} />
             </a>
           ))}
         </div>
       </div>
       <div className={clsx("container", classes.contactWrapper)}>
-        <div className={classes.inputWrapper}>
-          <Input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="First Name"
-          />
-          <Input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            placeholder="Last Name"
-          />
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-          <Input
-            type="text"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            placeholder="Company"
-          />
-          <textarea
-            className={classes.message}
-            name="message"
-            id="message"
-            rows="7"
-            placeholder="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-        </div>
-        <button type="submit" className={classes.button}>
-          Submit
-        </button>
+        <ContactForm />
       </div>
     </Wrapper>
   );

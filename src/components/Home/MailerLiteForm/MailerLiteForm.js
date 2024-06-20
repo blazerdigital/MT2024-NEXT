@@ -1,5 +1,3 @@
-// src/components/MailerLiteForm.js
-
 import React, { useEffect } from 'react';
 import styles from './MailerLiteForm.module.css';
 
@@ -8,6 +6,7 @@ const MailerLiteForm = () => {
     const script1 = document.createElement('script');
     script1.src = 'https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127';
     script1.type = 'text/javascript';
+    script1.async = true;
     document.body.appendChild(script1);
 
     const script2 = document.createElement('script');
@@ -28,7 +27,7 @@ const MailerLiteForm = () => {
           <div className={`${styles.mlFormEmbedWrapper} embedForm`}>
             <div className={`${styles.mlFormEmbedBody} ml-form-embedBodyDefault row-form`}>
               <div className={styles.mlFormEmbedContent}>
-                <h4 className={styles.newsletterhead}>Massive Theory Show Newsleter</h4>
+                <h4 className={styles.newsletterhead}>Massive Theory Show Newsletter</h4>
                 <p>Subscribe to Show Updates and New Release</p>
               </div>
               <form
@@ -63,8 +62,8 @@ const MailerLiteForm = () => {
                   <label className="checkbox">
                     <input type="checkbox" />
                     <span className="labelDescription">
-                    Opt in to receive news and updates.
-                  </span>
+                      Opt in to receive news and updates.
+                    </span>
                   </label>
                 </div>
                 <div className={`${styles.mlFormRecaptcha} ml-validate-required`}>

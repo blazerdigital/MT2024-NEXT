@@ -1,10 +1,9 @@
-// src/components/Home/SupportTheShow/SupportTheShow.js
-
 "use client";
 
 import React from "react";
 import classes from "./SupportTheShow.module.css";
-import { Heading, Text, VideoBg, Wrapper } from "@/components/common";
+import { Heading, Text, Wrapper } from "@/components/common";
+import VideoBg from "../../common/VideoBg/VideoBg"
 import clsx from "clsx";
 import MailerLiteForm from "../MailerLiteForm/MailerLiteForm";
 
@@ -22,9 +21,8 @@ const SupportTheShow = () => {
 
   return (
     <Wrapper className={classes.mainWrapper} id="support">
-      <div id="anchor-support" className="anchor"></div>
       <div className={clsx("container", classes.container)}>
-        <VideoBg url="/video/Mountain_BG.mp4" />
+      <VideoBg url="/video/Mountain_BG.mp4" />
         <Heading xl5 highlight className={classes.heading}>
           Support the Show
         </Heading>
@@ -34,21 +32,14 @@ const SupportTheShow = () => {
           <Heading xl4 highlight className={classes.title}>
             Subscribe to Our Newsletter
           </Heading>
-
           <Text base0 xl>
-            In addition to follow up on on Youtube, Rumber and Odysee. To show your support for us as content creators and help spread our
-            message, subscribing to our newsletter is the best action you can
-            take right now.
+            In addition to follow up on Youtube, Rumble and Odysee, to show your support for us as content creators and help spread our message, subscribing to our newsletter is the best action you can take right now.
           </Text>
           <Text base0 xl>
-            By subscribing, you'll be helping us achieve our goal of becoming
-            platform-independent, allowing us to stay connected as the digital
-            landscape continues to evolve.
+            By subscribing, you'll be helping us achieve our goal of becoming platform-independent, allowing us to stay connected as the digital landscape continues to evolve.
           </Text>
           <Text base0 xl>
-            Rest assured that your information will never be shared with
-            third-parties, so you'll only receive updates when a new episode
-            drops. Join our audience today and be a part of our journey!
+            Rest assured that your information will never be shared with third-parties, so you'll only receive updates when a new episode drops. Join our audience today and be a part of our journey!
           </Text>
         </div>
         <div className={classes.subscribeForm}>
@@ -56,19 +47,15 @@ const SupportTheShow = () => {
         </div>
       </div>
       <div className={clsx(classes.donationInfoContainer, "container")}>
-        
         <div className={classes.infoContainer}>
           <Heading xl4 highlight className={classes.title}>
             Make A Donation
           </Heading>
-
           <Text base0 xl>
-            Making a donation is quick, secure, and effortless through either
-            credit card or bank account. We appreciate your generous support.
+            Making a donation is quick, secure, and effortless through either credit card or bank account. We appreciate your generous support.
           </Text>
           <Text base0 xl>
-            Your generous support helps us to create more content, grow the
-            show, and have more impact. Your donation will be used for:
+            Your generous support helps us to create more content, grow the show, and have more impact. Your donation will be used for:
           </Text>
           <ul className={classes.helpsLists}>
             {helpsList.map((list, i) => (

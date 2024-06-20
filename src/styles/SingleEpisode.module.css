@@ -1,8 +1,8 @@
 .container {
   display: grid;
-
   gap: 40px;
   align-items: flex-start;
+  margin-top: 100px;
 }
 .button {
   font-size: 16px;
@@ -32,25 +32,8 @@
   font-family: "Work Sans", sans-serif;
   word-break: break-all;
 }
-
-@media only screen and (max-width: 991px) {
-  .wrapper {
-    padding-top: 100px;
-  }
-
-  .container {
-    gap: 24px;
-  }
-  .transcript {
-    margin: 12px 0;
-  }
-  .citations {
-    margin-top: 20px;
-  }
-}
 .wrapper {
-  padding: 20px;
-  margin-top: 50px; /* Adjust this value to match the height of your navbar */
+ margin-top: 100px;
 }
 
 .container {
@@ -69,4 +52,18 @@
   color:#FFF8E7;
   font-size: 1em;
   text-align: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper {
+  }
+  .container {
+    gap: 24px;
+  }
+  .transcript {
+    margin: 12px 0;
+  }
+  .citations {
+    margin-top: 20px;
+  }
 }

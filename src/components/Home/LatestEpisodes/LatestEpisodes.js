@@ -17,16 +17,21 @@ const LatestEpisodes = () => {
     fetchEpisodes();
   }, []);
 
+  // Filter and limit the displayed episodes to the latest 3
+  const displayedEpisodes = latestEpisodes
+    .filter(episode => episode.isLatest)
+    .slice(0, 3);
+
   return (
     <Wrapper className={classes.wrapper} id="latestepisodes">
       <div id="anchor-episodes" className="anchor"></div>
-       <div className={clsx("container", classes.container)}>
+      <div className={clsx("container", classes.container)}>
         <Heading xl5 highlight className={classes.heading}>
           Latest Episodes
         </Heading>
 
         <div className={classes.episodes}>
-          {latestEpisodes.map((episode, i) => (
+          {displayedEpisodes.map((episode, i) => (
             <Link href={`/episodes/${episode.id}`} className={classes.episode} key={i}>
               <img src={episode.img} alt={episode.info} className={classes.img} />
               <Text highlight xl textCenter className={classes.text}>

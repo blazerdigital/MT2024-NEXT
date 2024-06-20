@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./PlayNow.module.css";
-
 import clsx from "clsx";
 import { Heading, Wrapper } from "@/components/common";
 import dynamic from "next/dynamic";
