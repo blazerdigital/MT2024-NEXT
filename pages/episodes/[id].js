@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-import Footer from '../../src/components/Footer/Footer';
-import Navbar from '../../src/components/Navbar/Navbar';
 import Wrapper from '../../src/components/common/Wrapper/Wrapper';
 import Heading from '../../src/components/common/Heading/Heading';
 import Text from '../../src/components/common/Text/Text';
@@ -18,7 +16,6 @@ const Episode = ({ episode }) => {
 
   return (
     <>
-      <Navbar />
       <Wrapper className={classes.wrapper}>
         <div className={clsx('container', Pagestyles.container)}>
           <Heading className={Pagestyles.heading}>
@@ -53,7 +50,6 @@ const Episode = ({ episode }) => {
           </div>
         </div>
       </Wrapper>
-      <Footer />
     </>
   );
 };
