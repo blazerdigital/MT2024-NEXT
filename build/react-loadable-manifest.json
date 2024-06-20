@@ -82,5 +82,11 @@
     "files": [
       "static/chunks/reactPlayerYouTube.js"
     ]
+  },
+  "src/components/Home/PlayNow/PlayNow.js -> ../../PlayVideo/PlayVideo": {
+    "id": "src/components/Home/PlayNow/PlayNow.js -> ../../PlayVideo/PlayVideo",
+    "files": [
+      "static/chunks/src_components_PlayVideo_PlayVideo_js.js"
+    ]
   }
 }
