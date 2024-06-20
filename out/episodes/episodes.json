@@ -1,0 +1,26 @@
+[
+  {
+    "id": "episode4",
+    "img": "/images/episodes/episode1.png",
+    "info": "Solar Flares Cosmic Message",
+    "isLatest": true
+  },
+  {
+    "id": "episode3",
+    "img": "/images/episodes/episode3.png",
+    "info": "Can We Create Conscious Artificial Intelligence?",
+    "isLatest": true
+  },
+  {
+    "id": "episode2",
+    "img": "/images/episodes/episode2.png",
+    "info": "First Contact with Aliens – Dark Forest Theory & the Prime Directive",
+    "isLatest": true
+  },
+  {
+    "id": "episode1",
+    "img": "/images/episodes/episode1.png",
+    "info": "Gateway Experience – CIA’s Guide to Transcend Spacetime",
+    "isLatest": true
+  }
+]

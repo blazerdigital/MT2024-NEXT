@@ -1,55 +1,53 @@
-"use client"; // Add this line at the top
-import React, { useEffect, useState } from "react";
-import { useParams } from 'next/navigation'; // Use useParams instead of useRouter
+"use client";
+import React from 'react';
+import { useRouter } from 'next/router';
 import { Heading, Text, Wrapper } from '@/components/common';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import classes from './SingleEpisode.module.css';
-import '../../src/app/globals.css'; // Correct path to globals.css
+import '../../globals.css'; // Correct path to globals.css
 
-import Navbar from '@/components/Navbar/Navbar'; // Adjust the import path if necessary
-import Footer from '@/components/Footer/Footer'; // Adjust the import path if necessary
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 const ResponsivePlayer = dynamic(
-  () => import('@/components/PlayVideo/PlayVideo'), // Adjust the import path if necessary
+  () => import('@/components/PlayVideo/PlayVideo'),
   { ssr: false }
 );
 
-const SingleEpisode = () => {
-  const params = useParams(); // Get the URL parameters
-  const id = params?.id; // Safely access the 'id' parameter
-  const [episode, setEpisode] = useState(null);
+export async function generateStaticParams() {
+  const response = await fetch('https://api.example.com/episodes');
+  const episodes = await response.json();
 
-  useEffect(() => {
-    if (id) {
-      const fetchEpisode = async () => {
-        try {
-          const response = await fetch(`/episodes/${id}.json`);
-          if (response.ok) {
-            const data = await response.json();
-            console.log('Fetched episode data:', data); // Debugging log
-            setEpisode(data);
-          } else {
-            console.error('Failed to fetch episode:', response.statusText);
-          }
-        } catch (error) {
-          console.error('Error fetching episode:', error);
-        }
-      };
-      fetchEpisode();
-    }
-  }, [id]);
+  return episodes.map(episode => ({
+    id: episode.id.toString(),
+  }));
+}
 
-  if (!episode) return <div>Loading...</div>;
+export async function getStaticProps({ params }) {
+  const response = await fetch(`https://api.example.com/episodes/${params.id}`);
+  if (!response.ok) {
+    return {
+      notFound: true,
+    };
+  }
 
-  console.log('Episode title:', episode.title); // Debugging log
+  const episode = await response.json();
 
+  return {
+    props: {
+      episode,
+    },
+  };
+}
+
+const SingleEpisode = ({ episode }) => {
   return (
     <>
       <Navbar />
       <Wrapper className={classes.wrapper}>
         <div className={clsx('container', classes.container)}>
-        <Heading className={classes.heading}>
+          <Heading className={classes.heading}>
             {episode.title}
           </Heading>
           <p className={classes.publishDate}>
