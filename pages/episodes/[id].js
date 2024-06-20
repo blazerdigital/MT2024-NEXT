@@ -62,11 +62,15 @@ export async function getStaticPaths() {
   const episodesDirectory = path.join(process.cwd(), 'public', 'episodes');
   const filenames = fs.readdirSync(episodesDirectory);
 
+  console.log("Filenames found:", filenames); // Logging filenames
+
   const paths = filenames
-    .filter((filename) => filename.endsWith('.json'))
+    .filter((filename) => filename.endsWith('.json') && filename !== 'episodes.json') // Exclude episodes.json
     .map((filename) => ({
       params: { id: filename.replace(/\.json$/, '') },
     }));
+
+  console.log("Paths generated:", paths); // Logging paths
 
   return { paths, fallback: false }; // No fallback, ensuring all paths are pre-rendered
 }
@@ -78,6 +82,7 @@ export async function getStaticProps({ params }) {
   let episode = null;
 
   try {
+    console.log("Reading file:", filepath); // Logging file reading attempt
     const fileContents = fs.readFileSync(filepath, 'utf8');
     episode = JSON.parse(fileContents);
   } catch (err) {
