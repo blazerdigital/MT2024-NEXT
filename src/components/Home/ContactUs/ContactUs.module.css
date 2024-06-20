@@ -1,0 +1,98 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 370px;
+  max-height: 370px;
+  padding: 5%;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  z-index: 1;
+}
+.contactWrapper {
+  background: rgba(0, 0, 0, 0.18);
+  margin: 0 auto;
+  border-radius: 35px;
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 50%;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  padding-top: 12px;
+}
+.inputWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+.message {
+  width: 100%;
+  grid-column: 1/-1;
+  border-radius: 10px;
+  padding: 12px 15px;
+}
+.button {
+  font-size: 16px;
+  background: var(--Primary-Default);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: var(--Base-0);
+  text-align: center;
+  min-width: 169px;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logo {
+  max-width: 44px;
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .inputWrapper {
+    gap: 16px 12px;
+  }
+  .contactWrapper {
+    padding: 32px;
+  }
+  .header {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .container {
+    min-height: 280px;
+    max-height: 280px;
+  }
+  .inputWrapper {
+    gap: 16px 16px;
+    grid-template-columns: 1fr;
+  }
+  .contactWrapper {
+    padding: 24px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .contactWrapper {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,132 @@
+/* Container for the entire form */
+.mlFormContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Aligns content to center */
+.mlFormAlignCenter {
+  text-align: center;
+}
+
+/* Wrapper for form content */
+.mlFormEmbedWrapper {
+  padding: 20px;
+}
+
+/* Header for the form */
+.newsletterhead {
+  font-size: 2em;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs in the form */
+.mlFormEmbedContent p {
+  color: #f6f7f9;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+.mlFormEmbedPermissionsContent{
+  color: #f6f7f9;
+  font-size: 1em;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Input field styling */
+.mlFormFieldRow input {
+  width: 100%;
+  padding: 10px;
+  background: #f6f7f9;
+  border-radius: 4px;
+  font-size: 1em;
+  display: inline-block;
+}
+
+/* Checkbox row styling */
+.mlFormCheckboxRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for checkbox label */
+.mlFormCheckboxRow .checkbox {
+  display: flex;
+  align-items: center;
+}
+.mlFormCheckboxRow input[type="checkbox"] {
+  width: 20px; /* Custom width */
+  height: 20px; /* Custom height */
+  margin-right: 29px; /* Adjust the spacing between the checkbox and the text as needed */
+  border-radius: 4px; /* Custom border radius */
+}
+/* Checkbox input styling */
+.mlFormCheckboxRow {
+  font-family: "Work Sans", sans-serif;
+  margin-right: 8px;
+  color: #f6f7f9;
+  display: block;
+  width: 300px;
+  height: 20px;
+  display: inline-block;
+}
+.mlFormFieldRow input {
+  width: 100%;
+  padding: 10px;
+  background: #f6f7f9;
+  border-radius: 4px;
+  font-size: 1em;
+  display: inline;
+}
+.mlFormCheckboxRow .checkbox span.labelDescription {
+  padding-left: 30px;
+  color: #f6f7f9;
+  font-size: 1em;
+  color: #f6f7f9;
+}
+
+/* Submit button styling */
+.mlFormEmbedSubmit button {
+  color: #f6f7f9;
+  background-color: #5946b2;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  border-radius: 15px;
+}
+
+/* Submit button hover effect */
+.mlFormEmbedSubmit button.primary:hover {
+  background-color: #0056b3;
+}
+
+/* Recaptcha container */
+.mlFormRecaptcha {
+  margin-bottom: 20px;
+}
+
+/* Success message styling */
+.mlFormSuccessBody {
+  text-align: center;
+  padding: 20px;
+}
+
+.mlFormSuccessBody h4 {
+  font-size: 24px;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.mlFormSuccessBody p {
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  margin-top: 40px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.heading{
+  font-family: 'AmsiPro-Ultra', sans-serif;
+  font-size: 2em;
+  color:#ffd700;
+  padding-left: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
