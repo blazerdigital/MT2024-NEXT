@@ -87,3 +87,13 @@ button:hover, a:hover {
   margin-top: -80px; /* Negative margin to offset the height */
   visibility: hidden; /* Hide the div */
 }
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in;
+}
