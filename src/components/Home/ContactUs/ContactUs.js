@@ -3,8 +3,7 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import classes from "./ContactUs.module.css";
-import { Heading, Text, Wrapper } from "@/components/common";
-import VideoBg from "../../common/VideoBg/VideoBg"
+import { Heading, Text, VideoBg, Wrapper } from "@/components/common";
 import clsx from "clsx";
 
 function ContactForm() {
@@ -14,69 +13,96 @@ function ContactForm() {
   }
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
-      <label htmlFor="first-name" className={classes.label}>
-        First Name
-      </label>
-      <input
-        id="first-name"
-        type="text"
-        name="firstName"
-        className={classes.input}
-      />
-      <ValidationError
-        prefix="First Name"
-        field="firstName"
-        errors={state.errors}
-        className={classes.error}
-      />
+      <div className={classes.inlineWrapper}>
+        <div className={classes.field}>
+          <label htmlFor="first-name" className={classes.label}>
+            First Name
+          </label>
+          <input
+            id="first-name"
+            type="text"
+            name="firstName"
+            className={classes.input}
+          />
+          <ValidationError
+            prefix="First Name"
+            field="firstName"
+            errors={state.errors}
+            className={classes.error}
+          />
+        </div>
+        <div className={classes.field}>
+          <label htmlFor="last-name" className={classes.label}>
+            Last Name
+          </label>
+          <input
+            id="last-name"
+            type="text"
+            name="lastName"
+            className={classes.input}
+          />
+          <ValidationError
+            prefix="Last Name"
+            field="lastName"
+            errors={state.errors}
+            className={classes.error}
+          />
+        </div>
+      </div>
 
-      <label htmlFor="last-name" className={classes.label}>
-        Last Name
-      </label>
-      <input
-        id="last-name"
-        type="text"
-        name="lastName"
-        className={classes.input}
-      />
-      <ValidationError
-        prefix="Last Name"
-        field="lastName"
-        errors={state.errors}
-        className={classes.error}
-      />
+      <div className={classes.field}>
+        <label htmlFor="email" className={classes.label}>
+          Email Address
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          className={classes.input}
+        />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
+          className={classes.error}
+        />
+      </div>
 
-      <label htmlFor="email" className={classes.label}>
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        className={classes.input}
-      />
-      <ValidationError
-        prefix="Email"
-        field="email"
-        errors={state.errors}
-        className={classes.error}
-      />
+      <div className={classes.field}>
+        <label htmlFor="company" className={classes.label}>
+          Company Name
+        </label>
+        <input
+          id="company"
+          type="text"
+          name="company"
+          className={classes.input}
+        />
+        <ValidationError
+          prefix="Company"
+          field="company"
+          errors={state.errors}
+          className={classes.error}
+        />
+      </div>
 
-      <label htmlFor="company" className={classes.label}>
-        Company Name
-      </label>
-      <input
-        id="company"
-        type="text"
-        name="company"
-        className={classes.input}
-      />
-      <ValidationError
-        prefix="Company"
-        field="company"
-        errors={state.errors}
-        className={classes.error}
-      />
+      <div className={classes.field}>
+        <label htmlFor="message" className={classes.label}>
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          className={classes.message}
+          rows="7"
+        ></textarea>
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+          className={classes.error}
+        />
+      </div>
 
       <button type="submit" disabled={state.submitting} className={classes.button}>
         Submit
@@ -95,7 +121,7 @@ const ContactUs = () => {
   return (
     <Wrapper className={classes.mainWrapper} id="contact">
       <div className={clsx("container", classes.container)}>
-      <VideoBg url="/video/UFO_BG.mp4" />
+        <VideoBg url="/video/UFO_BG.mp4" />
         <Heading xl5 highlight className={classes.heading}>
           Contact
         </Heading>

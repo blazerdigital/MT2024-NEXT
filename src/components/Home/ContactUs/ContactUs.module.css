@@ -2,16 +2,17 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 100px;
+  padding: 36px 0 !important;
 }
 .container {
   position: relative;
   z-index: 1;
   min-height: 370px;
   max-height: 370px;
-  padding: 5%;
+  padding-left: 50px;
+}
+.form{
+  width: 100%;
 }
 .heading {
   position: absolute;
@@ -29,7 +30,10 @@
   flex-direction: column;
   gap: 24px;
   align-items: flex-start;
-  width: 50%;
+  width: 100%;
+}
+.button{
+  margin-top: 20px;
 }
 .header {
   display: grid;
@@ -37,15 +41,18 @@
   gap: 24px;
   padding-top: 12px;
 }
-.inputWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.inlineWrapper {
+  display: flex;
   gap: 20px;
+  width: 100%;
+}
+.field {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 .message {
   width: 100%;
-  grid-column: 1/-1;
   border-radius: 10px;
   padding: 12px 15px;
 }
@@ -67,9 +74,38 @@
   max-width: 44px;
   width: 100%;
 }
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color:#FFF8E7;
+}
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--Base-3);
+  background-color: rgba(0, 0, 0, 0.18);
+  color: var(--Base-0);
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+.textarea{
+  background-color: rgba(0, 0, 0, 0.18);
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
 @media only screen and (max-width: 991px) {
-  .inputWrapper {
-    gap: 16px 12px;
+  .inlineWrapper {
+    flex-direction: column;
+    gap: 16px 0;
   }
   .contactWrapper {
     padding: 32px;
@@ -83,10 +119,6 @@
   .container {
     min-height: 280px;
     max-height: 280px;
-  }
-  .inputWrapper {
-    gap: 16px 16px;
-    grid-template-columns: 1fr;
   }
   .contactWrapper {
     padding: 24px;

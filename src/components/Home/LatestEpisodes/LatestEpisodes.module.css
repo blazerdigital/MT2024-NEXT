@@ -1,18 +1,18 @@
 .wrapper {
   padding-bottom: 0;
-  padding-top: 50px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 35px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .episodes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px 40px;
+  gap: 25px 25px;
 }
 .episode {
   display: flex;
@@ -41,7 +41,7 @@
   margin-top: 20px;
   font-size: 1em;
   font-family: "Work Sans", sans-serif;
-  color:#FFF8E7;
+  color:#ffd700;
   background-color: rgba(0, 0, 0, 0.18);
   border: none;
   border-radius: 25px;

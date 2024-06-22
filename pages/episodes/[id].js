@@ -1,10 +1,14 @@
+import dynamic from 'next/dynamic';
+
+// Dynamically import PlayVideo with no server-side rendering
+const PlayVideo = dynamic(() => import('../../src/components/PlayVideo/PlayVideo'), { ssr: false });
+
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
 import Wrapper from '../../src/components/common/Wrapper/Wrapper';
 import Heading from '../../src/components/common/Heading/Heading';
 import Text from '../../src/components/common/Text/Text';
-import PlayVideo from '../../src/components/PlayVideo/PlayVideo';
 import clsx from 'clsx';
 import Pagestyles from '../../src/styles/SingleEpisode.module.css';
 import classes from '../../src/app/globals.css';
@@ -24,7 +28,7 @@ const Episode = ({ episode }) => {
           <p className={Pagestyles.publishDate}>
             Published on: {new Date(episode.publishDate).toLocaleDateString()}
           </p>
-          <PlayVideo url={episode.videoUrl} />
+          {episode.videoUrl && <PlayVideo url={episode.videoUrl} />}
           <button className={clsx(Pagestyles.button, Pagestyles.transcript)}>
             TRANSCRIPT
           </button>
@@ -58,15 +62,11 @@ export async function getStaticPaths() {
   const episodesDirectory = path.join(process.cwd(), 'public', 'episodes');
   const filenames = fs.readdirSync(episodesDirectory);
 
-  console.log("Filenames found:", filenames); // Logging filenames
-
   const paths = filenames
     .filter((filename) => filename.endsWith('.json') && filename !== 'episodes.json') // Exclude episodes.json
     .map((filename) => ({
       params: { id: filename.replace(/\.json$/, '') },
     }));
-
-  console.log("Paths generated:", paths); // Logging paths
 
   return { paths, fallback: false }; // No fallback, ensuring all paths are pre-rendered
 }
@@ -78,7 +78,6 @@ export async function getStaticProps({ params }) {
   let episode = null;
 
   try {
-    console.log("Reading file:", filepath); // Logging file reading attempt
     const fileContents = fs.readFileSync(filepath, 'utf8');
     episode = JSON.parse(fileContents);
   } catch (err) {

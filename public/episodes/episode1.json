@@ -19,12 +19,68 @@
   ],
   "citations": [
     {
-      "text": "Citation 1",
-      "url": "https://example.com/citation1"
+      "text": "https://www.forbes.com/sites/bernardmarr/2018/04/23/weaponizing-artificial-intelligence-the-scary-prospect-of-ai-enabled-terrorism/#4d37d3d377b6",
+      "url": "https://www.forbes.com/sites/bernardmarr/2018/04/23/weaponizing-artificial-intelligence-the-scary-prospect-of-ai-enabled-terrorism/#4d37d3d377b6"
     },
     {
-      "text": "Citation 2",
-      "url": "https://example.com/citation2"
+      "text": "https://www.wired.com/story/how-to-build-a-self-conscious-ai-machine/",
+      "url": "https://www.wired.com/story/how-to-build-a-self-conscious-ai-machine/"
+    },
+    {
+      "text": "https://futurism.com/kurzweil-claims-that-the-singularity-will-happen-by-2045",
+      "url": "https://futurism.com/kurzweil-claims-that-the-singularity-will-happen-by-2045"
+    },
+    {
+      "text": "https://www.forbes.com/sites/simonchandler/2020/05/18/elon-musk-is-damaging-tech-and-the-tech-industry/#7691fcc19b8d",
+      "url": "https://www.forbes.com/sites/simonchandler/2020/05/18/elon-musk-is-damaging-tech-and-the-tech-industry/#7691fcc19b8d"
+    },
+    {
+      "text": "https://medium.com/@tjajal/distinguishing-between-narrow-ai-general-ai-and-super-ai-a4bc44172e22",
+      "url": "https://medium.com/@tjajal/distinguishing-between-narrow-ai-general-ai-and-super-ai-a4bc44172e22"
+    },
+    {
+      "text": "https://medium.com/@chethankumargn/artificial-intelligence-definition-types-examples-technologies-962ea75c7b9b",
+      "url": "https://medium.com/@chethankumargn/artificial-intelligence-definition-types-examples-technologies-962ea75c7b9b"
+    },
+    {
+      "text": "https://www.zdnet.com/article/what-is-artificial-general-intelligence/",
+      "url": "https://www.zdnet.com/article/what-is-artificial-general-intelligence/"
+    },
+    {
+      "text": "https://www.mckinsey.com/business-functions/operations/our-insights/an-executive-primer-on-artificial-general-intelligence",
+      "url": "https://www.mckinsey.com/business-functions/operations/our-insights/an-executive-primer-on-artificial-general-intelligence"
+    },
+    {
+      "text": "https://en.wikipedia.org/wiki/Philosophy_of_mind",
+      "url": "https://en.wikipedia.org/wiki/Philosophy_of_mind"
+    },
+    {
+      "text": "https://www.scientificamerican.com/article/is-consciousness-universal/",
+      "url": "https://www.scientificamerican.com/article/is-consciousness-universal/"
+    },
+    {
+      "text": "https://www.nature.com/articles/s41599-020-0445-0",
+      "url": "https://www.nature.com/articles/s41599-020-0445-0"
+    },
+    {
+      "text": "https://towardsdatascience.com/asimovs-laws-of-robotics-and-why-ai-may-not-abide-by-them-e6da09f8c754",
+      "url": "https://towardsdatascience.com/asimovs-laws-of-robotics-and-why-ai-may-not-abide-by-them-e6da09f8c754"
+    },
+    {
+      "text": "https://www.airspacemag.com/daily-planet/reaching-singularity-may-be-humanitys-greatest-and-last-accomplishment-180974528/",
+      "url": "https://www.airspacemag.com/daily-planet/reaching-singularity-may-be-humanitys-greatest-and-last-accomplishment-180974528/"
+    },
+    {
+      "text": "https://www.theguardian.com/science/2020/feb/27/why-your-brain-is-not-a-computer-neuroscience-neural-networks-consciousness",
+      "url": "https://www.theguardian.com/science/2020/feb/27/why-your-brain-is-not-a-computer-neuroscience-neural-networks-consciousness"
+    },
+    {
+      "text": "https://www.theguardian.com/technology/2019/jul/24/at-last-feel-again-robotic-hand-user-sense-touch-grapes-eggs",
+      "url": "https://www.theguardian.com/technology/2019/jul/24/at-last-feel-again-robotic-hand-user-sense-touch-grapes-eggs"
+    },
+    {
+      "text": "https://sociable.co/technology/ai-academy-asks-students-sign-ethical-contract-hippocratic-oath",
+      "url": "https://sociable.co/technology/ai-academy-asks-students-sign-ethical-contract-hippocratic-oath"
     }
   ]
 }
