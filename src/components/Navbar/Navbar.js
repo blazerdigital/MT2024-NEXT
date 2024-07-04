@@ -13,6 +13,7 @@ const Navbar = () => {
     { navItem: "EPISODES", to: "/allepisodes" },
     { navItem: "SUPPORT", to: "/support" },
     { navItem: "CONTACT", to: "/contact" },
+    { navItem: "MERCH", to: "/merch" },
   ];
 
   const socialLinks = [
