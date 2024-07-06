@@ -1,3 +1,5 @@
+/* footer.module.css */
+
 .wrapper {
   background: url(/images/footerBg.png);
   background-size: cover;
@@ -7,13 +9,15 @@
   min-height: 140px;
   position: relative;
   opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s forwards 1s; /* Animation with a 1-second delay */
+  animation: fadeIn 0.2s forwards 1s; /* Animation with a 1-second delay */
 }
+
 @keyframes fadeIn {
   to {
     opacity: 1; /* Fade in */
   }
 }
+
 .text {
   position: absolute;
   top: 50%;
@@ -21,8 +25,19 @@
   transform: translate(-50%, -50%);
   width: 90%;
 }
+
 @media only screen and (max-width: 520px) {
   .wrapper {
     min-height: 130px;
   }
+}
+
+/* Special styles for the merch page footer */
+.specialFooter {
+  background-color: #ffffff; /* Example background color for special footer */
+  background-image: none;
+}
+
+.specialFooter p {
+  color: #333; /* Example text color for special footer */
 }

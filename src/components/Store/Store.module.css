@@ -1,9 +1,15 @@
+.merchPageContainer {
+  display: flex;
+  flex-direction: column;
+}
 .merchPage {
-    /* Add any styles you want for the MerchPage component */
-  }
-  
+  flex: 1; /* Allows the content to grow and take available space */
+  background-color: #fff; /* Example background color */
+  padding: 20px;
+}
+
   .storeWrapper {
     /* Add styles for the wrapper around EcwidStore */
-    padding-top: 100px;
+    margin-top: 120px;
   }
   

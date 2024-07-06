@@ -95,6 +95,9 @@
 .closeIcon {
   display: none;
 }
+.ec-storefront-v2 svg{
+color:#fff;
+}
 @media only screen and (max-width: 991px) {
   .header {
     justify-content: center;

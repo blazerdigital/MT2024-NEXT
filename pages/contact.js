@@ -9,7 +9,6 @@ const ContactPage = () => {
   return (
     <div>
     <ContactUs />
-    <EcwidStore />
     </div>
   );
 };

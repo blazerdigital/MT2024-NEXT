@@ -1,4 +1,6 @@
-"use client";
+// Navbar.js
+
+"use client"; // Ensure the component is treated as a client-side component
 
 import React, { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
@@ -6,6 +8,7 @@ import { AiOutlineAlignRight } from "react-icons/ai";
 import classes from "./Navbar.module.css";
 import clsx from "clsx";
 import Link from "next/link";
+import ShoppingBag from "../common/ShoppingBag/ShoppingBag";
 
 const Navbar = () => {
   const navItems = [
@@ -35,7 +38,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 90) {
+    if (typeof window !== "undefined" && window.scrollY > 90) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -43,10 +46,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
@@ -67,6 +72,7 @@ const Navbar = () => {
                 <img src={social.logo} alt="#" className={classes.socialLogo} />
               </a>
             ))}
+          
           </div>
           <IoMdClose className={clsx(classes.icon, classes.closeIcon)} onClick={() => setSidebar(false)} />
         </div>
@@ -84,6 +90,7 @@ const Navbar = () => {
             <AiOutlineAlignRight className={classes.icon} onClick={() => setSidebar(true)} />
           )}
         </div>
+        <ShoppingBag />
       </header>
     </div>
   );
