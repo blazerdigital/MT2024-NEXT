@@ -126,7 +126,7 @@ button:hover, a:hover {
   text-align: center;
 }
 html#ecwid_html body#ecwid_body .ec-minicart__icon .icon-default path[stroke], html#ecwid_html body#ecwid_body .ec-minicart__icon .icon-default circle[stroke] {
-  stroke: #FFF8E7!important;
+  stroke: #5946b2!important;
 }
 html#ecwid_html body#ecwid_body .ec-minicart--no-shape{
   width: 40px;
@@ -134,3 +134,15 @@ html#ecwid_html body#ecwid_body .ec-minicart--no-shape{
   margin-left: 10px;
 }
 
+html#ecwid_html body#ecwid_body .ec-size .ec-store .ec-footer__link{
+  font-size: 1.25em!important;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+
+html#ecwid_html body#ecwid_body .ec-size.ec-size--xs .ec-store .ec-footer__row[data-items="3"] .ec-footer__cell{
+  width: 200px!important;
+}
+html#ecwid_html body#ecwid_body .ec-size .ec-store .product-details__product-description:not(.product-details__product-description--blank){
+  font-size: 1em!important;
+}
