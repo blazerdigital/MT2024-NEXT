@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const AllEpisodes = () => {
   const [episodes, setEpisodes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchEpisodes = async () => {
@@ -22,6 +23,8 @@ const AllEpisodes = () => {
         }
       } catch (error) {
         console.error('Error fetching episodes:', error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchEpisodes();
@@ -29,8 +32,12 @@ const AllEpisodes = () => {
 
   console.log('Episodes state:', episodes);
 
-  if (episodes.length === 0) {
-    return <div>Loading...</div>;
+  if (isLoading) {
+    return (
+      <Wrapper className={clsx(classes.wrapper, classes.loadingWrapper)}>
+        <div className={classes.loadingText}>Loading...</div>
+      </Wrapper>
+    );
   }
 
   return (

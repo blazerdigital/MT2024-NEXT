@@ -47,12 +47,6 @@ body {
 .content {
   flex: 1; /* This will take up the remaining space */
 }
-#my-store-66578708 {
-  margin-top: 220px; /* Adjust as necessary to ensure it's not hidden behind the navbar */
-  padding: 200px; /* Add some padding around the store content */
-  z-index: 1;
-  position: relative;
-}
 
 @media only screen and (max-width: 991px) {
 }
@@ -113,7 +107,7 @@ button:hover, a:hover {
   transition: opacity 0.3s ease-in;
 }
 /* src/app/globals.css */
-body-merch-page {
+.body-merch-page {
   background:#fff !important;
 }
 .footer-wrapper {
@@ -126,5 +120,17 @@ body-merch-page {
   position: relative;
   opacity: 0;
   animation: fadeIn 0.2s forwards 1s;
+}
+.footer-wrapper p{
+  color: #fff;
+  text-align: center;
+}
+html#ecwid_html body#ecwid_body .ec-minicart__icon .icon-default path[stroke], html#ecwid_html body#ecwid_body .ec-minicart__icon .icon-default circle[stroke] {
+  stroke: #FFF8E7!important;
+}
+html#ecwid_html body#ecwid_body .ec-minicart--no-shape{
+  width: 40px;
+  height: 25px;
+  margin-left: 10px;
 }
 

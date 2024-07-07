@@ -10,11 +10,13 @@ function MyApp({ Component, pageProps }) {
   const isMerchPage = router.pathname === '/merch';
 
   return (
-    <div>
+    <div className="main-wrapper">
       <Navbar />
-      <Wrapper>
-        <Component {...pageProps} />
-      </Wrapper>
+      <div className="content">
+        <Wrapper>
+          <Component {...pageProps} />
+        </Wrapper>
+      </div>
       <Footer specialFooter={isMerchPage} />
     </div>
   );

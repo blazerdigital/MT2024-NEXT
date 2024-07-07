@@ -1,14 +1,11 @@
-// Navbar.js
-
 "use client"; // Ensure the component is treated as a client-side component
 
 import React, { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
-import classes from "./Navbar.module.css";
+import classes from "../Navbar/Navbar.module.css";
 import clsx from "clsx";
 import Link from "next/link";
-import ShoppingBag from "../common/ShoppingBag/ShoppingBag";
 
 const Navbar = () => {
   const navItems = [
@@ -90,7 +87,6 @@ const Navbar = () => {
             <AiOutlineAlignRight className={classes.icon} onClick={() => setSidebar(true)} />
           )}
         </div>
-        <ShoppingBag />
       </header>
     </div>
   );

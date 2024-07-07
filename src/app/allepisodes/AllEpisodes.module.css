@@ -5,6 +5,18 @@
   margin-top: 120px; /* Adjust this value to match the height of your navbar */
   margin-bottom: 60px;
 }
+.loadingWrapper {
+  min-height: 100vh; /* Ensure it covers the entire viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #28313b 0.03%, #3f3a5d 101.47%);
+}
+.loadingText {
+  font-size: 1em;
+  color: #3d4a5a;
+  animation: loadingAnimation 1s infinite ease-in-out;
+}
 .episodes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,15 +1,15 @@
-.merchPageContainer {
-  display: flex;
-  flex-direction: column;
-}
+/* src/components/Store/Store.module.css */
 .merchPage {
-  flex: 1; /* Allows the content to grow and take available space */
-  background-color: #fff; /* Example background color */
   padding: 20px;
 }
 
-  .storeWrapper {
-    /* Add styles for the wrapper around EcwidStore */
-    margin-top: 120px;
-  }
-  
+.storeWrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 100px;
+}
+
+/* src/styles/merchPageStyles.css */
+.body-merch-page {
+  background-color: #f0f0f0; /* Example color, change to your desired color */
+}
