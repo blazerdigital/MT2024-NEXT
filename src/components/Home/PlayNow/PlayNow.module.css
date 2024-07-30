@@ -10,11 +10,14 @@
   font-family: 'AmsiPro-Ultra', sans-serif;
   font-size: 2em;
   color:#ffd700;
-  padding-left: 50px;
+  padding-left: 5%;
 }
 @media only screen and (max-width: 991px) {
   .container {
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .heading{
+    padding-left: 5%;
   }
 }

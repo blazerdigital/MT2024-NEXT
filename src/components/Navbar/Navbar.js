@@ -13,21 +13,20 @@ const Navbar = () => {
     { navItem: "EPISODES", to: "/allepisodes" },
     { navItem: "SUPPORT", to: "/support" },
     { navItem: "CONTACT", to: "/contact" },
-    { navItem: "MERCH", to: "/merch" },
   ];
 
   const socialLinks = [
     {
       logo: "/images/youtube.png",
-      link: "#",
+      link: "https://www.youtube.com/@massivetheory",
     },
     {
       logo: "/images/rumble.png",
-      link: "#",
+      link: "https://rumble.com/c/MassiveTheory",
     },
     {
       logo: "/images/odysee.png",
-      link: "#",
+      link: "https://odysee.com/@massivetheory:d",
     },
   ];
 

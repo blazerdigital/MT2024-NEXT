@@ -113,9 +113,9 @@ function ContactForm() {
 
 const ContactUs = () => {
   const socialLinks = [
-    { logo: "/images/youtube.png", link: "#" },
-    { logo: "/images/rumble.png", link: "#" },
-    { logo: "/images/odysee.png", link: "#" },
+    { logo: "/images/youtube.png", link: "https://www.youtube.com/@massivetheory" },
+    { logo: "/images/rumble.png", link: "https://rumble.com/c/MassiveTheory" },
+    { logo: "/images/odysee.png", link: "https://odysee.com/@massivetheory:d" },
   ];
 
   return (
@@ -129,7 +129,7 @@ const ContactUs = () => {
 
       <div className={clsx(classes.header, "container")}>
         <Text xl highlight>
-          If you have an idea for the show, a business inquiry, or want to
+          If you have an idea for an episode, a business inquiry, or want to
           collaborate on a project, feel free to drop us a message!
         </Text>
         <div className={classes.socialContainer}>

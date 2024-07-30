@@ -10,13 +10,14 @@ import MailerLiteForm from "../MailerLiteForm/MailerLiteForm";
 const SupportTheShow = () => {
   const helpsList = [
     "Creating New Content",
-    "Illustration",
-    "Animation",
+    "Custom Art",
+    "Animation and VFX",
     "Original Music and Licenses",
     "Website Security",
     "Exploring New Technology",
     "Making Us Platform Independent",
     "Covering Operational Expenses",
+    "Expanding Our Operations",
   ];
 
   return (
@@ -52,10 +53,10 @@ const SupportTheShow = () => {
             Make A Donation
           </Heading>
           <Text base0 xl>
-            Making a donation is quick, secure, and effortless through either credit card or bank account. We appreciate your generous support.
+          Donating is quick, secure, and effortless. Using the Donorbox app, your donation is processed securely, ensuring your transaction is safe and protected. 
           </Text>
           <Text base0 xl>
-            Your generous support helps us to create more content, grow the show, and have more impact. Your donation will be used for:
+          We greatly appreciate your generosity. Your support enables us to produce more content, expand our show, and enhance our impact. Your donation will be used for:
           </Text>
           <ul className={classes.helpsLists}>
             {helpsList.map((list, i) => (
@@ -66,6 +67,9 @@ const SupportTheShow = () => {
               </li>
             ))}
           </ul>
+          <Text base0 xl>
+          If you would like to be included in the credits of our next episode, please leave your name in the comment section when you make your donation. Your donation truly makes a difference.
+          </Text>
         </div>
         <div className={classes.donationBox}>
           <iframe
