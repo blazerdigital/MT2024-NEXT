@@ -9,7 +9,7 @@ import clsx from "clsx";
 function ContactForm() {
   const [state, handleSubmit] = useForm("xkgwwnje");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p className={classes.successMessage}> Thank you for reaching out. Your message has been sent! Although I may not always have the opportunity to respond to each one, we read all the messages. </p>;
   }
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
@@ -128,10 +128,10 @@ const ContactUs = () => {
       </div>
 
       <div className={clsx(classes.header, "container")}>
-        <Text xl highlight>
-          If you have an idea for an episode, a business inquiry, or want to
-          collaborate on a project, feel free to drop us a message!
-        </Text>
+      <Text xl highlight className={classes.paragraphStyle}>
+    If you have an idea for an episode, a business inquiry, or want to
+    collaborate on a project, feel free to drop us a message!
+  </Text>
         <div className={classes.socialContainer}>
           {socialLinks.map((social, i) => (
             <a href={social.link} target="_blank" rel="noreferrer" key={i}>
