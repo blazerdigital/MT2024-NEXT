@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import classes from "./AllEpisodes.module.css";
 import { Heading, Text, Wrapper } from "@/components/common";
 import clsx from "clsx";

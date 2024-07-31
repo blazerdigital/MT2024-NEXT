@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer"; // Correct import path
 import Navbar from "../components/Navbar/Navbar"; // Correct import path
 
 export const metadata = {
-  title: "Massive Theory",
+  title: "Massive Theory - All Episodes",
   description: "...",
 };
 const Layout = ({ children }) => {
