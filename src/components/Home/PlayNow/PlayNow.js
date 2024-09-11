@@ -16,7 +16,7 @@ const PlayNow = ({ url }) => {
         <Heading className={classes.heading}>
           Playing Now
         </Heading>
-        <ResponsivePlayer url="https://youtu.be/DI9SguZRJOM" />
+        <ResponsivePlayer url="https://www.youtube.com/embed/bFFKnsNGxQg?si=-eKBuCHuzUyN4WiB" />
       </div>
     </Wrapper>
   );

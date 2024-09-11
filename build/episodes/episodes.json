@@ -1,5 +1,11 @@
 [
   {
+    "id": "episode5",
+    "img": "/images/episodes/episode5.png",
+    "info": "Admiral Byrd's Polar Myths: Operation Highjump & Inner World Civilizations",
+    "isLatest": true
+  },
+  {
     "id": "episode4",
     "img": "/images/episodes/episode4.png",
     "info": "Solar Flares: Cosmic Messages and Divine Justice",
